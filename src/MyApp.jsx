@@ -1,4 +1,5 @@
 import React from "react";
+import img from "./img.jpg";
 
 function MyButton() {
   return <button>I'm a button</button>;
@@ -24,7 +25,7 @@ const MyApp = () => {
         <h1>Welcome to my app</h1>
         <MyButton />
       </div>
-      <div></div>
+      <img src={img} className="avatar" />
     </>
   );
 };

@@ -19,10 +19,13 @@ function AboutPage() {
 
 const MyApp = () => {
   return (
-    <div>
-      <h1>Welcome to my app</h1>
-      <MyButton />
-    </div>
+    <>
+      <div>
+        <h1>Welcome to my app</h1>
+        <MyButton />
+      </div>
+      <div></div>
+    </>
   );
 };
 

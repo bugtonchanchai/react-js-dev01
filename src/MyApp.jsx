@@ -45,6 +45,7 @@ const MyApp = () => {
       />
       <hr />
       {isLoggedIn ? <h1>Logged In</h1> : <h1>Login form</h1>}
+      {isLoggedIn && <h1>Logged In</h1>}
     </>
   );
 };

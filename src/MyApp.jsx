@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import img from "./img.jpg";
 
 const user = {
@@ -28,11 +28,18 @@ const listItems = products.map((product) => (
 ));
 
 function MyButton() {
-  return <button onClick={handleClick}>I'm a button</button>;
-}
+  const [count, setCount] = useState(0);
 
-function handleClick() {
-  alert("You clicked me!");
+  function handleClick() {
+    console.log("You clicked me!");
+    setCount(count + 1);
+  }
+
+  return (
+    <>
+      <button onClick={handleClick}>Clicked {count} times</button>
+    </>
+  );
 }
 
 function AboutPage() {
@@ -69,6 +76,10 @@ const MyApp = () => {
       {isLoggedIn && <h1>Logged In</h1>}
       <hr />
       <ul>{listItems}</ul>
+      <hr />
+      <MyButton />
+      <br />
+      <MyButton />
     </>
   );
 };
